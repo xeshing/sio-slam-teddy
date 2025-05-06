@@ -63,18 +63,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Custom colors for our cyber-japan theme
-        neon: {
-          pink: "#ff6ec7",
-          blue: "#00f6ff",
-          purple: "#bd00ff",
-          yellow: "#ffde00",
-        },
+        // Updated pastel colors
         pastel: {
-          pink: "#ffb7c5",
-          blue: "#b5deff",
-          purple: "#d8b5ff",
-          yellow: "#ffffd1",
+          red: "#ffdee2",
+          gray: "#f1f0fb",
+          blue: "#d3e4fd",
+          peach: "#fde1d3",
         },
       },
       borderRadius: {
@@ -99,39 +93,17 @@ export default {
           "0%": { opacity: "1", transform: "translateY(0)" },
           "100%": { opacity: "0", transform: "translateY(10px)" },
         },
-        "glow": {
-          "0%, 100%": { 
-            boxShadow: "0 0 5px rgba(255, 110, 199, 0.5), 0 0 20px rgba(255, 110, 199, 0.2)",
-          },
-          "50%": { 
-            boxShadow: "0 0 10px rgba(255, 110, 199, 0.8), 0 0 30px rgba(255, 110, 199, 0.4)",
-          },
-        },
-        "neon-pulse": {
-          "0%, 100%": {
-            textShadow: "0 0 4px rgba(255, 110, 199, 0.6), 0 0 11px rgba(255, 110, 199, 0.4), 0 0 19px rgba(255, 110, 199, 0.2)"
-          },
-          "50%": {
-            textShadow: "0 0 8px rgba(255, 110, 199, 0.8), 0 0 18px rgba(255, 110, 199, 0.6), 0 0 30px rgba(255, 110, 199, 0.4)"
-          }
-        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         "fade-out": "fade-out 0.5s ease-out",
-        "glow": "glow 2s ease-in-out infinite",
-        "neon-pulse": "neon-pulse 2s ease-in-out infinite"
       },
       fontFamily: {
         'japanese': ['Zen Kaku Gothic New', 'sans-serif'],
         'cyber': ['Rajdhani', 'sans-serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'cyber-grid': "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 0h1v1H0zM0 25h1v1H0zM0 50h1v1H0zM0 75h1v1H0zM0 99h1v1H0zM25 0h1v1h-1zM25 25h1v1h-1zM25 50h1v1h-1zM25 75h1v1h-1zM25 99h1v1h-1zM50 0h1v1h-1zM50 25h1v1h-1zM50 50h1v1h-1zM50 75h1v1h-1zM50 99h1v1h-1zM75 0h1v1h-1zM75 25h1v1h-1zM75 50h1v1h-1zM75 75h1v1h-1zM75 99h1v1h-1zM99 0h1v1h-1zM99 25h1v1h-1zM99 50h1v1h-1zM99 75h1v1h-1zM99 99h1v1h-1z' fill='rgba(0,246,255,0.1)'/%3E%3C/svg%3E\")",
-      }
     },
   },
   plugins: [require("tailwindcss-animate")],
