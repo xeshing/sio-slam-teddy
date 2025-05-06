@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useLocation } from "react-router-dom";
+import AnimatedBackground from "./AnimatedBackground";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -21,7 +22,8 @@ const PageLayout: React.FC<PageLayoutProps> = ({ children, className = "" }) => 
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col">
+      <AnimatedBackground />
       <Navbar />
       <main className={`flex-grow pt-20 animate-fade-in ${className}`}>
         {children}
