@@ -88,6 +88,37 @@
     @apply opacity-100 translate-y-0;
   }
   
+  /* Hacking text glitch effect */
+  @keyframes textGlitch {
+    0% {
+      opacity: 1;
+      transform: translateX(0) skew(0);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    2% {
+      clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
+    }
+    5% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transform: translateX(3px) skew(1deg);
+    }
+    10% {
+      transform: translateX(-3px) skew(-1deg);
+    }
+    15% {
+      transform: translateX(0) skew(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) skew(0);
+    }
+  }
+  
+  .text-glitch {
+    animation: textGlitch 2.5s infinite;
+    display: inline-block;
+  }
+  
   ::-webkit-scrollbar {
     width: 8px;
   }

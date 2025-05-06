@@ -1,14 +1,17 @@
-
 import React from "react";
 import PageLayout from "../components/layout/PageLayout";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Briefcase, Image, ExternalLink } from "lucide-react";
 import ProjectCard from "../components/ui/ProjectCard";
+import HackingText from "../components/ui/HackingText";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const Home = () => {
   const { toast } = useToast();
-
+  const aboutSectionRef = useScrollReveal({ threshold: 0.1 });
+  const projectsSectionRef = useScrollReveal({ threshold: 0.1, delay: 200 });
+  
   React.useEffect(() => {
     toast({
       title: "Bienvenue sur mon portfolio !",
@@ -44,7 +47,7 @@ const Home = () => {
                 Portfolio
               </span>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 font-cyber">
-                Votre Nom
+                <HackingText originalText="Teddy" alternateText="テディ" />
                 <br />
                 <span className="text-primary">
                   Créateur Digital
@@ -89,7 +92,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-pastel-gray/20" id="about">
+      <section className="py-20 bg-pastel-gray/20" id="about" ref={aboutSectionRef as React.RefObject<HTMLElement>}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="md:w-1/2">
@@ -201,7 +204,7 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" ref={projectsSectionRef as React.RefObject<HTMLElement>}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="font-cyber text-sm uppercase tracking-widest text-primary mb-2 inline-block">
