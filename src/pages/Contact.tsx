@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
             
             <div className="bg-gradient-to-br from-pastel-blue/30 to-pastel-purple/30 p-8 rounded-lg">
-              <h2 className="bg-primary text-white font-cyber py-3 px-6 rounded-md hover:bg-primary/90 transition-all flex items-center">Envoyez-moi un message</h2>
+              <h2 className="font-cyber text-2xl mb-6">Envoyez-moi un message</h2>
               <ContactForm />
             </div>
           </div>

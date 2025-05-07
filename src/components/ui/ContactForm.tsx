@@ -105,7 +105,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-gradient-to-r from-neon-blue to-neon-pink text-white font-cyber py-2 px-6 rounded-md hover:shadow-lg hover:shadow-neon-pink/20 transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+        className="bg-primary text-white font-cyber py-3 px-6 rounded-md hover:bg-primary/90 transition-all flex items-center"
       >
         {isSubmitting ? "Envoi en cours..." : "Envoyer"}
         <Send className={`h-4 w-4 ${isSubmitting ? "animate-pulse" : ""}`} />
