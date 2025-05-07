@@ -34,28 +34,21 @@ const Footer = () => {
             <h3 className="font-cyber font-medium mb-3">Social</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://github.com/xeshing"
                 className="p-2 rounded-full bg-white/20 hover:bg-neon-blue/20 transition-colors"
                 aria-label="Github"
               >
                 <Github className="h-4 w-4" />
               </a>
               <a
-                href="#"
-                className="p-2 rounded-full bg-white/20 hover:bg-neon-blue/20 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/teddy-gal%C3%A9a-raveaud-37a157281/"
                 className="p-2 rounded-full bg-white/20 hover:bg-neon-blue/20 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:teddygalea2@gmail.com"
                 className="p-2 rounded-full bg-white/20 hover:bg-neon-blue/20 transition-colors"
                 aria-label="Email"
               >
