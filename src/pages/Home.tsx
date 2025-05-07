@@ -24,14 +24,14 @@ const Home = () => {
       id: "project1",
       title: "Serveur d'API",
       description: "Un serveur d'API RESTful",
-      imageUrl: "https://github.com/xeshing/PPE4",
+      imageUrl: "fastapi.svg",
       tags: ["Python", "FastAPI", "MySQL"],
     },
     {
       id: "project2",
       title: "DetectionToYaml",
       description: "Conversion de règles Splunk en YAML",
-      imageUrl: "https://source.unsplash.com/random/800x600/?neon",
+      imageUrl: "splunk.jpeg",
       tags: ["Splunk", "ContentCTL", "Flask"],
     },
   ];
