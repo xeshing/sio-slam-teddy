@@ -76,7 +76,7 @@ const Home = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 bg-pastel-red">
                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-white">
                   <img
-                    src="public/photo.png"
+                    src="photo.png"
                     alt="Your Name"
                     className="w-full h-full object-cover"
                   />
