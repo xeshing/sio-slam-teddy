@@ -38,6 +38,7 @@
     --radius: 0.5rem;
   }
 
+
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px; /* Account for fixed header */
@@ -204,4 +205,6 @@
     animation: slowerFloat 35s ease-in-out infinite;
     animation-delay: -7s;
   }
+
+  
 }

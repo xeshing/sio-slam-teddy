@@ -4,6 +4,8 @@ import PageLayout from "../components/layout/PageLayout";
 import SectionHeader from "../components/ui/SectionHeader";
 import ContactForm from "../components/ui/ContactForm";
 import { MapPin, Phone, Mail, Globe, Github, Twitter, Linkedin } from "lucide-react";
+import HackingText from "../components/ui/HackingText";
+
 
 const Contact = () => {
   return (
@@ -12,7 +14,7 @@ const Contact = () => {
       <section className="bg-gradient-to-br from-pastel-pink/40 to-pastel-blue/40 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h1 className="font-cyber text-4xl md:text-5xl font-bold mb-4 text-center">
-            <span className="text-neon-pink">Contact</span>
+          <HackingText originalText="Contact" alternateText="c0nt4cT" />
           </h1>
           <p className="text-center max-w-2xl mx-auto text-lg">
             Vous avez un projet en tête ou une question ? N'hésitez pas à me contacter !
@@ -29,42 +31,12 @@ const Contact = () => {
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
-                  <div className="bg-pastel-purple/20 p-3 rounded-full mr-4">
-                    <MapPin className="h-5 w-5 text-neon-purple" />
-                  </div>
-                  <div>
-                    <h3 className="font-cyber font-medium mb-1">Adresse</h3>
-                    <p className="text-muted-foreground">Paris, France</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-pastel-blue/20 p-3 rounded-full mr-4">
-                    <Phone className="h-5 w-5 text-neon-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-cyber font-medium mb-1">Téléphone</h3>
-                    <p className="text-muted-foreground">+33 6 XX XX XX XX</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
                   <div className="bg-pastel-pink/20 p-3 rounded-full mr-4">
                     <Mail className="h-5 w-5 text-neon-pink" />
                   </div>
                   <div>
                     <h3 className="font-cyber font-medium mb-1">Email</h3>
-                    <p className="text-muted-foreground">contact@example.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-pastel-yellow/20 p-3 rounded-full mr-4">
-                    <Globe className="h-5 w-5 text-neon-yellow" />
-                  </div>
-                  <div>
-                    <h3 className="font-cyber font-medium mb-1">Site web</h3>
-                    <p className="text-muted-foreground">www.example.com</p>
+                    <p className="text-muted-foreground">teddygalea2@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -73,21 +45,14 @@ const Contact = () => {
                 <h3 className="font-cyber text-xl mb-4">Réseaux sociaux</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://github.com/xeshing"
                     className="bg-gradient-to-r from-neon-blue/10 to-neon-blue/30 p-3 rounded-full hover:from-neon-blue/20 hover:to-neon-blue/40 transition-all"
                     aria-label="Github"
                   >
                     <Github className="h-6 w-6 text-neon-blue" />
                   </a>
                   <a
-                    href="#"
-                    className="bg-gradient-to-r from-neon-purple/10 to-neon-purple/30 p-3 rounded-full hover:from-neon-purple/20 hover:to-neon-purple/40 transition-all"
-                    aria-label="Twitter"
-                  >
-                    <Twitter className="h-6 w-6 text-neon-purple" />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.linkedin.com/in/teddy-gal%C3%A9a-raveaud-37a157281/"
                     className="bg-gradient-to-r from-neon-pink/10 to-neon-pink/30 p-3 rounded-full hover:from-neon-pink/20 hover:to-neon-pink/40 transition-all"
                     aria-label="LinkedIn"
                   >

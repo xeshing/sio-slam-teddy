@@ -38,7 +38,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   return (
     <div 
       ref={headerRef}
-      className={`mb-10 opacity-0 ${center ? "text-center" : ""}`}
+      className={`mb-10 opacity-1 ${center ? "text-center" : ""}`}
     >
       <h2 className="font-cyber text-3xl md:text-4xl font-bold mb-3 relative inline-block">
         {title}

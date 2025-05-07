@@ -22,17 +22,17 @@ const Home = () => {
   const featuredProjects = [
     {
       id: "project1",
-      title: "E-commerce Moderne",
-      description: "Une boutique en ligne avec une esthétique épurée et moderne",
-      imageUrl: "https://source.unsplash.com/random/800x600/?minimal,shop",
-      tags: ["React", "Node.js", "MongoDB"],
+      title: "Serveur d'API",
+      description: "Un serveur d'API RESTful",
+      imageUrl: "https://github.com/xeshing/PPE4",
+      tags: ["Python", "FastAPI", "MySQL"],
     },
     {
       id: "project2",
-      title: "Application mobile",
-      description: "Une application mobile avec une interface inspirée du design japonais",
-      imageUrl: "https://source.unsplash.com/random/800x600/?minimal,app",
-      tags: ["React Native", "Firebase"],
+      title: "DetectionToYaml",
+      description: "Conversion de règles Splunk en YAML",
+      imageUrl: "https://source.unsplash.com/random/800x600/?neon",
+      tags: ["Splunk", "ContentCTL", "Flask"],
     },
   ];
 
@@ -44,19 +44,18 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
               <span className="font-cyber text-sm md:text-base uppercase tracking-widest text-primary mb-2 inline-block">
-                Portfolio
+                IT Student
               </span>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 font-cyber">
                 <HackingText originalText="Teddy" alternateText="テディ" />
                 <br />
-                <span className="text-primary">
-                  Créateur Digital
-                </span>
+                  <span className="text-primary">
+                    <HackingText originalText="Galéa-Raveaud" alternateText="ガレア"/>
+                  </span>
               </h1>
               <p className="text-lg md:text-xl mb-8 max-w-lg text-muted-foreground">
-                Bienvenue dans mon portfolio alliant l'esthétique japonaise à
-                un design minimaliste. Découvrez mes projets, mon parcours et mes
-                compétences en technologie et design.
+                Étudiant en BTS Services Informatiques aux Organisations et alternant
+                en cybersécurité au CERT La Poste.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -77,13 +76,10 @@ const Home = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 bg-pastel-red">
                 <div className="w-full h-full rounded-full overflow-hidden border-4 border-white">
                   <img
-                    src="https://source.unsplash.com/random/400x400/?portrait"
+                    src="public/photo.png"
                     alt="Your Name"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-full p-3 border-4 border-pastel-gray shadow-sm">
-                  <Code className="h-8 w-8 text-primary" />
                 </div>
               </div>
             </div>
@@ -100,19 +96,19 @@ const Home = () => {
                 À Propos
               </span>
               <h2 className="text-3xl font-bold mb-6 font-cyber">
-                Développeur passionné par le design et la cybersécurité
+                Passionné par la sécurité offensive
               </h2>
               <p className="mb-4 text-muted-foreground">
-                Je suis un développeur qui aime créer des interfaces modernes et
-                innovantes, inspirées par l'esthétique japonaise et le design minimaliste.
+                C'est lors de mes premiers pas sur TryHackMe que j'ai découvert ma passion pour la
+                cybersécurité.
               </p>
               <p className="mb-4 text-muted-foreground">
-                Spécialisé en sécurité informatique et en développement web, je mets
-                mes compétences au service de projets créatifs et techniques.
+                Mon alternance au CERT La Poste m'a permis d'acquérir des compétences
+                pratiques en matière de sécurité des systèmes d'information.
               </p>
               <p className="mb-6 text-muted-foreground">
-                Mon objectif est de repousser les limites de l'expérience
-                utilisateur tout en garantissant des standards de sécurité élevés.
+                Dans le futur, je souhaite concilier mes compétences en développement
+                et en cybersécurité pour la création d'outils de sécurité innovants.
               </p>
               <div className="flex gap-4">
                 <Link
@@ -131,70 +127,70 @@ const Home = () => {
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               <div className="bg-white p-5 rounded-lg shadow-sm">
-                <h3 className="font-cyber text-lg mb-3">Frontend</h3>
+                <h3 className="font-cyber text-lg mb-3">Blue team</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    React.js
+                    Splunk SIEM
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    TypeScript
+                    Analyse de logs
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Tailwind CSS
+                    Détection d'incidents
                   </li>
                 </ul>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm">
-                <h3 className="font-cyber text-lg mb-3">Backend</h3>
+                <h3 className="font-cyber text-lg mb-3">Bug Bounty</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Node.js
+                    YesWeHack
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Express
+                    HackerOne
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    MongoDB
+                    BugCrowd
                   </li>
                 </ul>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm">
-                <h3 className="font-cyber text-lg mb-3">Design</h3>
+                <h3 className="font-cyber text-lg mb-3">Certifications</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Figma
+                    CPTS (WIP)
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Adobe Suite
+                    OSCP (WIP)
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    UX/UI
+                    OSWE (WIP)
                   </li>
                 </ul>
               </div>
               <div className="bg-white p-5 rounded-lg shadow-sm">
-                <h3 className="font-cyber text-lg mb-3">Cybersécurité</h3>
+                <h3 className="font-cyber text-lg mb-3">Python</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Pentest
+                    Challenges Codewars
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    OWASP
+                    Splunk SDK
                   </li>
                   <li className="flex items-center">
                     <span className="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Kali Linux
+                    Automatisation de tâches
                   </li>
                 </ul>
               </div>
@@ -236,11 +232,12 @@ const Home = () => {
       <section className="py-16 bg-pastel-gray/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 font-cyber">
-            Vous avez un projet en tête ?
+            Une question ? C'est par ici !
           </h2>
           <p className="max-w-xl mx-auto mb-8 text-muted-foreground">
             Je suis toujours ouvert à de nouvelles opportunités et collaborations.
-            N'hésitez pas à me contacter pour discuter de votre projet.
+            <br/>
+            N'hésitez pas à me contacter.
           </p>
           <Link
             to="/contact"
