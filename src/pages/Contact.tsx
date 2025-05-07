@@ -63,42 +63,8 @@ const Contact = () => {
             </div>
             
             <div className="bg-gradient-to-br from-pastel-blue/30 to-pastel-purple/30 p-8 rounded-lg">
-              <h2 className="font-cyber text-2xl mb-6">Envoyez-moi un message</h2>
+              <h2 className="bg-primary text-white font-cyber py-3 px-6 rounded-md hover:bg-primary/90 transition-all flex items-center">Envoyez-moi un message</h2>
               <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* FAQ Section */}
-      <section className="py-16 bg-gradient-to-br from-pastel-blue/20 to-pastel-purple/20">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <SectionHeader
-            title="Questions fréquentes"
-            subtitle="Quelques réponses aux questions que l'on me pose souvent"
-            center
-          />
-          
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
-              <h3 className="font-cyber text-xl mb-2">Quels types de projets acceptez-vous ?</h3>
-              <p className="text-muted-foreground">
-                Je travaille principalement sur des projets de développement web et d'audit de sécurité. Je suis ouvert à diverses collaborations, n'hésitez pas à me contacter pour discuter de votre projet.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
-              <h3 className="font-cyber text-xl mb-2">Comment se déroule une collaboration ?</h3>
-              <p className="text-muted-foreground">
-                Après un premier contact, nous discuterons de votre projet en détail pour comprendre vos besoins. Je vous proposerai ensuite une approche adaptée et un devis. Une fois la collaboration lancée, je vous tiendrai régulièrement informé de l'avancement du projet.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
-              <h3 className="font-cyber text-xl mb-2">Proposez-vous des formations en cybersécurité ?</h3>
-              <p className="text-muted-foreground">
-                Oui, je propose des formations personnalisées en cybersécurité, notamment sur la sécurité web, les tests d'intrusion et la sensibilisation à la sécurité pour les équipes techniques et non-techniques.
-              </p>
             </div>
           </div>
         </div>
