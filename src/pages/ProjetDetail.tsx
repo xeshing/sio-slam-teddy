@@ -11,7 +11,7 @@ const projects = [
       "Un serveur d'API pour la gestion des patients et des infirmières.",
     fullDescription:
       "La mission était de développer à partir d’un framework de type  full rest, une application de type web service (sans vue) qui réponde aux besoins d’échanges de données avec les applications Android, PHP, Microsoft, Raspberry Pi de gestion des visites des infirmières. Tous les accès aux routes, sauf l’identification, demande la présence d’un jeton de type JWT valide.",
-    imageUrl: "../public/fastapi.svg",
+    imageUrl: "/fastapi.svg",
     tags: ["Python", "FastAPI", "MySQL"],
     githubUrl: "https://github.com/xeshing/PPE4",
     features: [
@@ -27,8 +27,8 @@ const projects = [
       "Python pour la logique backend",
     ],
     galleryImages: [
-      "../public/fastapi_1.png",
-      "../public/fastapi_2.png",
+      "/fastapi_1.png",
+      "/fastapi_2.png",
     ],
   },
   {
@@ -53,9 +53,9 @@ const projects = [
       "Jinja pour le rendu des templates",
     ],
     galleryImages: [
-      "../public/splunk_1.png",
-      "../public/splunk_2.png",
-      "../public/splunk_3.png",
+      "/splunk_1.png",
+      "/splunk_2.png",
+      "/splunk_3.png",
     ],
   },
   // Additional projects objects...
