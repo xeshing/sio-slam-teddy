@@ -1,5 +1,4 @@
-
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import PageLayout from "../components/layout/PageLayout";
 import { ArrowLeft, Github, ExternalLink } from "lucide-react";
@@ -7,64 +6,56 @@ import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 const projects = [
   {
     id: "project1",
-    title: "E-commerce Cyberpunk",
+    title: "Serveur d'API - Kaliémie",
     description:
-      "Une boutique en ligne avec une esthétique futuriste inspirée par le cyberpunk japonais",
+      "Un serveur d'API pour la gestion des patients et des infirmières.",
     fullDescription:
-      "Ce projet est une boutique en ligne complète avec une esthétique futuriste inspirée par le cyberpunk japonais. Elle offre une expérience utilisateur immersive avec des effets visuels néon et une navigation intuitive. La plateforme inclut un système de panier d'achat, de paiement sécurisé, et une gestion des comptes utilisateurs.\n\nLe design a été pensé pour évoquer les rues nocturnes de Tokyo, avec des contrastes forts entre les tons sombres et les accents lumineux. L'interface utilisateur est à la fois moderne et facilement navigable, avec une attention particulière portée aux animations et transitions.",
-    imageUrl: "https://source.unsplash.com/random/1200x800/?cyberpunk",
-    tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "La mission était de développer à partir d’un framework de type  full rest, une application de type web service (sans vue) qui réponde aux besoins d’échanges de données avec les applications Android, PHP, Microsoft, Raspberry Pi de gestion des visites des infirmières. Tous les accès aux routes, sauf l’identification, demande la présence d’un jeton de type JWT valide.",
+    imageUrl: "../public/fastapi.svg",
+    tags: ["Python", "FastAPI", "MySQL"],
+    githubUrl: "https://github.com/xeshing/PPE4",
     features: [
-      "Interface utilisateur immersive",
-      "Système de panier et paiement",
-      "Gestion des comptes utilisateurs",
-      "Catalogue de produits dynamique",
-      "Design responsive adapté à tous les appareils",
+      "Gestion des patients et infirmières",
+      "Authentification JWT",
+      "API RESTful",
+      "Documentation Swagger",
+      "Gestion des erreurs et des exceptions",
     ],
     technologies: [
-      "React pour le frontend",
-      "Node.js et Express pour l'API backend",
-      "MongoDB pour la base de données",
-      "Stripe pour les paiements",
-      "JWT pour l'authentification",
+      "MySQL pour la base de données",
+      "FastAPI pour le développement de l'API",
+      "Python pour la logique backend",
     ],
     galleryImages: [
-      "https://source.unsplash.com/random/800x600/?cyberpunk,shop",
-      "https://source.unsplash.com/random/800x600/?neon,product",
-      "https://source.unsplash.com/random/800x600/?cyberpunk,technology",
+      "../public/fastapi_1.png",
+      "../public/fastapi_2.png",
     ],
   },
   {
     id: "project2",
-    title: "Application mobile Neon",
+    title: "DetectionToYaml",
     description:
-      "Une application mobile avec des effets néon et une interface inspirée de Tokyo",
+      "Outil de conversion de règles de détection Splunk en YAML.",
     fullDescription:
-      "Cette application mobile est conçue avec une esthétique néon vibrante inspirée par les paysages urbains nocturnes de Tokyo. Elle propose une interface utilisateur immersive avec des animations fluides et des effets de lumière dynamiques.\n\nL'application intègre des fonctionnalités sociales, un système de messagerie en temps réel, et une navigation intuitive. L'accent est mis sur l'expérience utilisateur avec des transitions douces et un design qui évoque l'atmosphère énergique des quartiers de divertissement japonais.",
-    imageUrl: "https://source.unsplash.com/random/1200x800/?neon",
-    tags: ["React Native", "Firebase", "Expo", "Redux"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "L'objectif de ce projet était de créer un outil permettant de convertir des règles de détection Splunk en fichiers YAML. Cet outil s'intègre dans une démarche d'implémentation de pipeline CI/CD et permettra dans le futur d'ajouter du versioning aux règles de détection.",
+    imageUrl: "../public/splunk.jpeg",
+    tags: ["Flask", "Python", "HTML", "CSS", "JavaScript", "Jinja"],
     features: [
-      "Interface utilisateur inspirée de Tokyo",
-      "Effets néon et animations fluides",
-      "Système de messagerie en temps réel",
-      "Profils utilisateurs personnalisables",
-      "Mode hors ligne",
+      "Conversion de règles de détection Splunk en YAML",
+      "Interface utilisateur simple et intuitive",
+      "Gestion des erreurs et des exceptions",
+      "Documentation complète",
     ],
     technologies: [
-      "React Native pour le développement mobile",
-      "Firebase pour le backend et l'authentification",
-      "Expo pour faciliter le développement",
-      "Redux pour la gestion d'état",
-      "Firebase Firestore pour la base de données",
+      "Flask pour le développement de l'application web",
+      "Python pour la logique backend",
+      "HTML, CSS et JavaScript pour l'interface utilisateur",
+      "Jinja pour le rendu des templates",
     ],
     galleryImages: [
-      "https://source.unsplash.com/random/800x600/?tokyo,night",
-      "https://source.unsplash.com/random/800x600/?neon,city",
-      "https://source.unsplash.com/random/800x600/?japan,lights",
+      "../public/splunk_1.png",
+      "../public/splunk_2.png",
+      "../public/splunk_3.png",
     ],
   },
   // Additional projects objects...
@@ -73,6 +64,8 @@ const projects = [
 const ProjetDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   if (!project) {
     return (
@@ -128,16 +121,6 @@ const ProjetDetail = () => {
             </div>
             <p className="text-lg mb-6">{project.description}</p>
             <div className="flex flex-wrap gap-4">
-              {project.demoUrl && (
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-neon-blue to-neon-pink text-white font-cyber py-2 px-6 rounded-md hover:shadow-lg hover:shadow-neon-pink/20 transition-all flex items-center"
-                >
-                  Voir le demo <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              )}
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}
@@ -178,7 +161,8 @@ const ProjetDetail = () => {
                     {project.galleryImages.map((image, index) => (
                       <div
                         key={index}
-                        className="overflow-hidden rounded-lg border border-border hover:shadow-lg transition-all duration-300"
+                        className="overflow-hidden rounded-lg border border-border hover:shadow-lg transition-all duration-300 cursor-pointer"
+                        onClick={() => setSelectedImage(image)} // Set the selected image
                       >
                         <img
                           src={image}
@@ -224,6 +208,20 @@ const ProjetDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Modal for Fullscreen Image */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)} // Close modal on click
+        >
+          <img
+            src={selectedImage}
+            alt="Fullscreen"
+            className="max-w-full max-h-full rounded-lg"
+          />
+        </div>
+      )}
     </PageLayout>
   );
 };

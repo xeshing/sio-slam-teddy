@@ -56,6 +56,13 @@ const Veille = () => {
       category: "Pratique",
       imageUrl: "ywh.jpeg",
     },
+    {
+      title: "LinkedIn",
+      description : "Réseau social professionnel où je peux découvrir des articles, des études de cas et des partages d'expérience en cybersécurité.",
+      link: "https://www.linkedin.com/",
+      category: "Ressource",
+      imageUrl: "linkedin.png",
+    }
   ];
 
   const [filter, setFilter] = React.useState<string>("all");
@@ -83,7 +90,7 @@ const Veille = () => {
             Ma <HackingText originalText="veille" alternateText="v3Ill3" /> technologique
           </h1>
           <p className="text-center max-w-2xl mx-auto text-lg">
-            Ressources, outils et actualités que je suis pour rester informé sur la cybersécurité et le penetration testing
+            Veille technologique en cybersécurité et pentest d'applications web.
           </p>
         </div>
       </section>
@@ -114,7 +121,6 @@ const Veille = () => {
         <div className="container mx-auto px-4">
           <SectionHeader
             title="Ressources et Outils"
-            subtitle="Une collection de ressources que je suis pour rester à jour dans le domaine de la cybersécurité"
             center
           />
           
@@ -128,6 +134,7 @@ const Veille = () => {
                     ? "bg-gradient-to-r from-neon-purple to-neon-blue text-white"
                     : "bg-white border border-border hover:bg-pastel-purple/20"
                 }`}
+                
               >
                 {item.name}
               </button>
