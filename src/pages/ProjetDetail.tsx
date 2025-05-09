@@ -38,7 +38,7 @@ const projects = [
       "Outil de conversion de règles de détection Splunk en YAML.",
     fullDescription:
       "L'objectif de ce projet était de créer un outil permettant de convertir des règles de détection Splunk en fichiers YAML. Cet outil s'intègre dans une démarche d'implémentation de pipeline CI/CD et permettra dans le futur d'ajouter du versioning aux règles de détection.",
-    imageUrl: "../public/splunk.jpeg",
+    imageUrl: "splunk.jpeg",
     tags: ["Flask", "Python", "HTML", "CSS", "JavaScript", "Jinja"],
     features: [
       "Conversion de règles de détection Splunk en YAML",
