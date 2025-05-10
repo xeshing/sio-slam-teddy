@@ -179,7 +179,7 @@ const Veille = () => {
               <div className="bg-gradient-to-r from-pastel-blue/30 to-pastel-pink/30 p-6 rounded-lg">
                 <h3 className="font-cyber text-xl mb-4">Pratique régulière</h3>
                 <p>
-                  Je participe à des CTF (Capture The Flag), je me forme sur HackTheBox et je participe des Bug Bounty sur YesWeHack.
+                  Je participe à des CTF (Capture The Flag), je me forme sur HackTheBox et je participe à des Bug Bounty sur YesWeHack.
                 </p>
               </div>
             </div>
