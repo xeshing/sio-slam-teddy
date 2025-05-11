@@ -69,6 +69,13 @@ const Veille = () => {
       link : "https://www.cert.ssi.gouv.fr/",
       category : "Ressource",
       imageUrl : "cert-fr.svg",
+    },
+    {
+      title : "MITRE ATT&CK",
+      description : "Base de données de techniques d'attaques informatiques, utilisée pour la défense et l'analyse des menaces.",
+      link : "https://attack.mitre.org/",
+      category : "Ressource",
+      imageUrl : "mitre.png",
     }
   ];
 
