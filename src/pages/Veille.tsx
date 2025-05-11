@@ -30,7 +30,7 @@ const Veille = () => {
     },
     {
       title: "PortSwigger",
-      description: "Sécurité des applicatios web.",
+      description: "Sécurité des applications web.",
       link: "https://portswigger.net/research",
       category: "Ressource",
       imageUrl: "portswigger.png",
