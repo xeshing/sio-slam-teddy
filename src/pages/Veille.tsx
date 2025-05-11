@@ -62,6 +62,13 @@ const Veille = () => {
       link: "https://www.linkedin.com/",
       category: "Ressource",
       imageUrl: "linkedin.png",
+    },
+    {
+      title : "CERT-FR",
+      description : "Centre gouvernemental de veille, d'alerte et de réponse aux attaques informatiques.",
+      link : "https://www.cert.ssi.gouv.fr/",
+      category : "Ressource",
+      imageUrl : "cert-fr.svg",
     }
   ];
 

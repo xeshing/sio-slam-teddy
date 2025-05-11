@@ -40,11 +40,11 @@ const VeilleCard: React.FC<VeilleCardProps> = ({
         <p className="text-muted-foreground text-sm">{description}</p>
       </div>
       {imageUrl && (
-        <div className="w-full h-40 overflow-hidden border-t border-border">
+        <div className="w-full h-40 flex items-center justify-center overflow-hidden border-t border-border">
           <img
             src={imageUrl}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="max-w-full max-h-full object-contain"
           />
         </div>
       )}
