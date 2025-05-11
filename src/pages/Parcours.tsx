@@ -10,7 +10,7 @@ const Parcours = () => {
   const experiences = [
     {
       year: "Juil. 2024 - Aujourd'hui",
-      title: "Analyste en Cybersécurité",
+      title: "Analyste en Cybersécurité - Alternance",
       organization: "CERT La Poste",
       description: "Conception de règles de détection Splunk pour la détection des menaces. Analyse des incidents de sécurité et réponse aux incidents.",
     },
@@ -30,22 +30,16 @@ const Parcours = () => {
 
   const education = [
     {
-      year: "2020 - 2021",
-      title: "Certification CEH (Certified Ethical Hacker)",
-      organization: "EC-Council",
-      description: "Certification professionnelle en hacking éthique, couvrant les techniques d'intrusion, l'analyse de vulnérabilités et les méthodologies de test de pénétration.",
+      year: "2023 - 2025",
+      title: "BTS Services Informatiques aux Organisations - Option SLAM",
+      organization: "Lycée Carcouet, Nantes",
+      description: "Formation en développement d'applications et gestion de projets informatiques.",
     },
     {
-      year: "2015 - 2017",
-      title: "Master en Sécurité Informatique",
-      organization: "École d'Ingénierie Numérique",
-      description: "Spécialisation en cybersécurité et tests d'intrusion. Projet de fin d'études sur l'automatisation des tests de sécurité dans les applications web.",
-    },
-    {
-      year: "2012 - 2015",
-      title: "Licence en Informatique",
-      organization: "Université des Sciences Numériques",
-      description: "Formation généraliste en informatique avec une spécialisation en développement web et bases de données. Introduction aux principes fondamentaux de la sécurité informatique.",
+      year: "2019 - 2020",
+      title: "Baccalauréat Professionnel Réalisation de Produits Imprimés et Plurimédias - Option production graphique",
+      organization: "Lycée Léonard de Vinci, Marseille",
+      description: "Production graphique assistée par ordinateur. Conception et réalisation de supports de communication visuelle.",
     },
   ];
 
@@ -91,7 +85,7 @@ const Parcours = () => {
             Mon <HackingText originalText="parcours" alternateText="p4rc0ur5" /> professionnel
           </h1>
           <p className="text-center max-w-2xl mx-auto text-lg">
-            De développeur à expert en cybersécurité, découvrez mon évolution professionnelle
+            Découvrez mon parcours professionnel.
           </p>
         </div>
       </section>
@@ -102,7 +96,7 @@ const Parcours = () => {
           <div className="max-w-3xl mx-auto">
             <SectionHeader
               title="Expérience Professionnelle"
-              subtitle="Mon parcours professionnel dans le développement et la cybersécurité"
+              subtitle=""
 
             />
             
@@ -121,6 +115,32 @@ const Parcours = () => {
           </div>
         </div>
       </section>
+
+
+      {/* Education Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <SectionHeader
+              title="Formation"
+              subtitle=""
+            />
+            <div className="pl-4">
+              {education.map((item, index) => (
+                <TimelineItem
+                  key={index}
+                  year={item.year}
+                  title={item.title}
+                  organization={item.organization}
+                  description={item.description}
+                  isLast={index === education.length - 1}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
     </PageLayout>
   );
 };
