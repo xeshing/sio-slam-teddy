@@ -80,7 +80,6 @@ const projects = [
     ],
     galleryImages: [
       "/aidiagme_1.png",
-      "/aidiagme_2.png",
     ],
   }
   // Additional projects objects...
