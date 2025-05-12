@@ -19,8 +19,15 @@ const Projets = () => {
       title: "DetectionToYaml",
       description: "Conversion de règles Splunk en YAML",
       imageUrl: "splunk.jpeg",
-      tags: ["Splunk", "ContentCTL", "Flask"],
+      tags: ["Splunk", "ContentCTL", "Flask", "Python"],
     },
+    {
+      id: "project3",
+      title: "Formulaire AI DiagMe",
+      description: "Formulaire d'auto-diagnostic pour les utilisateurs",
+      imageUrl: "aidiagme.png",
+      tags: ["JSON", "SurveyJS"],
+    }
   ];
 
   const [filter, setFilter] = React.useState<string>("all");
@@ -29,6 +36,10 @@ const Projets = () => {
     { id: "Splunk", name: "Splunk" },
     { id: "FastAPI", name: "FastAPI" },
     { id: "Flask", name: "Flask" },
+    { id: "SurveyJS", name: "SurveyJS"},
+    { id: "Python", name: "Python" },
+    { id: "MySQL", name: "MySQL" },
+    { id: "JSON", name: "JSON" },
   ];
 
   const filteredProjects = React.useMemo(() => {

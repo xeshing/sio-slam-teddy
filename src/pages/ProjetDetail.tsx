@@ -59,6 +59,30 @@ const projects = [
       "/yaml.png"
     ],
   },
+  {
+    id: "project3",
+    title: "Formulaire AI DiagMe",
+    description:
+      "Formulaire d'auto-diagnostic pour les utilisateurs.",
+    fullDescription:
+      "Ce projet consiste en la création d'un formulaire d'auto-diagnostic pour les utilisateurs. Le formulaire est conçu pour être simple et intuitif, permettant aux utilisateurs de répondre facilement aux questions posées.",
+    imageUrl: "/aidiagme.png",
+    tags: ["JSON", "SurveyJS"],
+    features: [
+      "Formulaire interactif",
+      "Validation des réponses",
+      "Exportation des résultats au format JSON",
+      "Documentation complète",
+    ],
+    technologies: [
+      "SurveyJS pour la création du formulaire",
+      "JSON pour le format des données",
+    ],
+    galleryImages: [
+      "/aidiagme_1.png",
+      "/aidiagme_2.png",
+    ],
+  }
   // Additional projects objects...
 ];
 

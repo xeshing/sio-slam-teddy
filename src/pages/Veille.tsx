@@ -50,7 +50,7 @@ const Veille = () => {
       imageUrl: "cbe.svg",
     },
     {
-      title: "Bug Bounty",
+      title: "YesWeHack",
       description: "Programmes de récompenses pour la découverte de vulnérabilités dans les applications et systèmes.",
       link: "https://www.yeswehack.com/fr",
       category: "Pratique",
